@@ -1,0 +1,36 @@
+broker:
+  id: mongodb-service-broker
+  name: MongoDB
+  description: A simple MongoDB service broker implementation
+  bindable: true
+  plan_updateable: false
+
+  plans:
+  - id: mongo-plan
+    name: default
+    description: Description of the plan
+    metadata:
+      bullets:
+      - Shared MongoDB server
+      - 100 MB Storage (not enforced)
+      - 40 concurrent connections (not enforced)
+      costs:
+      - amount:
+          usd: 0
+        unit: month
+    free: false
+
+  tags:
+  - mongodb
+  - document
+
+  metadata:
+    displayName: MongoDB
+    imageUrl: http://info.mongodb.com/rs/mongodb/images/MongoDB_Logo_Full.png
+    longDescription: MongoDB Service
+    providerDisplayName: HomeAtCloud.cz
+    documentationUrl: null
+    supportUrl: null
+
+  requires: null
+  dashboard_client: null
